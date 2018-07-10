@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var cadena = prompt("Dame una frase")
+        console.log(cadena)
+        var abecedario = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+        for (var i=0;i<=cadena.length;i++){
+            //var pos = cadena.indexOf(cadena[i])
+            //console.log(pos)
+            //console.log(cadena[i])
+            var pos = cadena.indexOf(cadena[i],pos)
+            var pos = cadena.indexOf(abecedario[i])
+            if(pos >=0 ){
+                    console.log(abecedario[i])
+
+                }
+            //console.log(pos)
+        }   
+    </script>
+</body>
+</html>

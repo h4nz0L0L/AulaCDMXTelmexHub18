@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let cadena = "hola amigos, el otro día me encontré con mis amigos, que conocían a sus amigos"
+    
+
+function cuentaPalabras (palabra, frase) {
+    var pos = 0
+    var cont = 0 
+    while (pos > -1) {
+        pos = frase.indexOf(palabra, pos)
+        if ( pos >= 0){
+            cont++
+            pos++
+        }
+        console.log(cont)
+    return cont//cuantas palabras hay en la cadena
+    }
+
+}
+
+let conteo = cuentaPalabras('amigos', cadena)
+console.log('cont', cont)
+    </script>
+</body>
+</html>

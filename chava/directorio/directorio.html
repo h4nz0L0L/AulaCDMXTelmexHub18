@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="directorio.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="formulario">
+            <div id="datos-generales">
+                <div><label for="nombre">Nombre: </label><input type="text" id="nombre"></div>
+                <div><label for="apellido">Apellido: </label><input type="text" id="apellido"></div>
+                <div><label for="fecha-nacimiento">Fecha nacimiento: </label><input type="date" id="fecha-nacimiento"></div>
+                <div><label for="sexo">Sexo</label><input type="radio" name="hm" value="h"> Hombre<input type="radio" name="hm" value="m"> Mujer</div>
+            </div>
+            <div>
+                <div><label for="calle">Calle</label><input type="text" id="calle"></div>
+                <div><label for="numero">Número:</label><input type="text" id="numero"></div>
+                <div><label for="delegacion">Delegacion</label><select>
+                        <option value="Alvaro">Álvaro Obregón</option>
+                        <option value="Azca">Azcapotzalco</option>
+                        <option value="Gustavo">Benito Juárez</option>
+                        <option value="Coyoacán">Coyoacán</option>
+                        <option value="Cuajimalpa">Cuajimalpa</option>
+                        <option value="Cuauhtémoc">Cuauhtémoc</option>
+                        <option value="Gustavo A. Madero">Gustavo A. Madero</option>
+                        <option value="Iztacalco">Iztacalco</option>
+                        <option value="">Iztapalapa</option>
+                        <option value="Magdalena Contreras">Magdalena Contreras</option>
+                        <option value="Miguel Hidalgo">Miguel Hidalgo</option>
+                        <option value="Milpa Alta">Milpa Alta</option>
+                        <option value="Tláhuac">Tláhuac</option>
+                        <option value="Tlalpan">Tlalpan</option>
+                        <option value="Tlalpan">Venustiano Carranza</option>
+                        <option value="Tlalpan">Xochimilco</option>
+                      </select></div>
+            </div>
+            <div id="telefonos">
+                <label for="telefono1">Telefono1
+                <input type="text" id="telefono1">
+                </label>
+                
+            </div>
+            <button onclick="agregarTelefono()">AgregarTelefono</button>
+        </div>
+        <div id="tarjetitas"></div>
+    </div>
+    <script src="directorio.js"></script>
+</body>
+</html>

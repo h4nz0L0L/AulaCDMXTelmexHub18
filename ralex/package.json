@@ -1,0 +1,14 @@
+{
+  "name": "ralex",
+  "version": "1.0.0",
+  "description": "1. [Juego Gato](./juego-gato/) 1. [Juego Gato](juego-gato/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.1.1"
+  }
+}

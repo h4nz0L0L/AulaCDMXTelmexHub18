@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscar repetidas</title>
+</head>
+<body>
+    <script>
+        var array = ["a","b","c","d","f","g","h","i","j","k","l"]
+        var newarray = array
+        var seRepite = false
+        while (seRepite == false) {
+            
+        
+            for(var i=0; i<10; i++){
+                if (array[i]==newarray[i+1]){
+                    console.log("Esto no se repite")
+
+                }else{
+                    console.log("esto se repite")
+                } 
+            }
+        } 
+
+    </script>
+</body>
+</html>

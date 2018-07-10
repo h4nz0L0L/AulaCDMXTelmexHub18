@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = prompt ("Dame tu frase")
+        console.log(str)
+    function findRepeat(str) {
+  const arr = str.split('');
+  const hash = new Map();
+  const result = [];
+  // If repeat the value is false, if no repeat the value is true
+  for (let i = 0; i < arr.length; i++) {
+    if (hash.get(arr[i]) === undefined) {
+      hash.set(arr[i], true);
+    } else {
+      const value = hash.get(arr[i]);
+      if (value) {
+        hash.set(arr[i], !value);
+      }
+    }
+  }
+  hash.forEach((v, k) => {
+    if (!v)
+      result.push(k);
+  });
+  return result;
+}
+console.log(...findRepeat(str));
+        </script>
+</body>
+</html>

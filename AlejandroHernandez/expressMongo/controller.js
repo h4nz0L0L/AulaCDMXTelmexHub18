@@ -1,10 +1,10 @@
 let mongo = require('mongodb')
 let client = mongo.MongoClient
 let url = "mongodb://localhost:27017"
-let dbName = "Telmex"
+let dbName = "telmex"
 
 function blog (req, res) {
-    res.send('Esta es la entrada número:' + req.params.numero + " del blog")
+    res.send('Esta es la entrada númoero:' + req.params.numero + " del blog")
 }
 
 function carta (req, res) {
@@ -48,9 +48,7 @@ function updatePersona (req, res) {
         let db = conn.db(dbName)
         
         db.collection('personas')
-        .update({_id: req.body._id},{
-            $set{name: "Andy"}
-         }, function (err, data){
+        .update(req.body, function (err, data){
             res.send(data)
         })
     })
@@ -66,14 +64,12 @@ function deletePersona (req, res) {
         })
     })
 }
-
-
 module.exports = {
     blog,
     carta,
     saludo,
     getPersonas,
     insertPersona,
-    updatePersona,
-    deletePersona
+    deletePersona,
+    updatePersona
 }

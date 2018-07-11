@@ -42,7 +42,7 @@ function insertPersona (req, res) {
         })
     })
 }
-function putPersona (req, res) {
+function updatePersona (req, res) {
     client.connect(url, function (err, conn) {
         if (err) console.log(err)
         let db = conn.db(dbName)
@@ -71,5 +71,5 @@ module.exports = {
     getPersonas,
     insertPersona,
     deletePersona,
-    putPersona
+    updatePersona
 }

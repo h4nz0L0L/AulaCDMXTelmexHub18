@@ -61,7 +61,7 @@ function deletePersona (req, res) {
         let db = conn.db(dbName)
         
         db.collection('personas')
-        .delete({_id: req.params._id}, function (err, data){
+        .delete({_id: req.params.id}, function (err, data){
             res.send(data)
         })
     })

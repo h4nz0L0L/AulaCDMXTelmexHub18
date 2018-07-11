@@ -1,0 +1,11 @@
+
+git remote add codeando https://github.com/CodeandoEstudiantes/AulaCDMXTelmexHub18.git
+git remote -v
+git branch 
+git checkout master
+git status
+ls agustin
+rm -rf agustin
+git log 
+git pull codeando master
+

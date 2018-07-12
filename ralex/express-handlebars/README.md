@@ -1,6 +1,6 @@
 # Express Handlebars
 
-1. Ruta que reciba el número de un blog
+[X]. Ruta que reciba el número de un blog
     
     get '/blog/:num'
 
@@ -9,7 +9,7 @@
     - en un h3 el número de articulo
     - en un p el contenido
 
-2. Ruta que manda a view con hbs donde capturo: título, número y contenido
+[X] Ruta que manda a view con hbs donde capturo: título, número y contenido
     
     get '/blog/new'
 
@@ -20,5 +20,5 @@
     recibe un body con
         titulo
         numero
-        contenido
+        texto
 

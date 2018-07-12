@@ -17,13 +17,27 @@ function findBlogByNum (req, res) {
     })
 }
 
+function findAllBlogs (req, res) {
+    client.connect(url, (err, conn) => {
+        if (err) console.log(err)
+        let db = conn.db(dbName)
+        db.collection('blogs')
+        .find({})
+        .toArray(function (err, data) {
+            res.send(data)
+        })
+    })
+}
+
 function renderNewBlog (req, res) {
-    console.log('renderNewBlog')
     res.render('new-blog')
+}
+function renderHome (req, res) {
+    res.render('home')
 }
 
 function insertBlog (req, res) {
-    console.log('kajhsdkjasd')
+    console.log('body', req.body)
     client.connect(url, (err, conn) => {
         if (err) console.log(err)
         let db = conn.db(dbName)        
@@ -32,14 +46,16 @@ function insertBlog (req, res) {
             req.body,
             function (err, data) {
                 console.log(data)
-                res.render('blog', data.ops)
+                res.send(data)
             }
         )
     })
 }
 
 module.exports = {
+    findAllBlogs,
     findBlogByNum,
     renderNewBlog,
+    renderHome,
     insertBlog
 }

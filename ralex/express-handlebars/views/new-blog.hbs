@@ -1,0 +1,18 @@
+Formulario 1
+<form action="/blog" method="POST" onsubmit="return submitBlog(this)">
+    <div>
+        <label for="title">Titulo: </label>
+        <input type="text" id="title" name="title">
+    </div>
+    <div>
+        <label for="num">Número: </label>
+        <input type="text" id="num" name="num">
+    </div>
+    <div>
+        <label for="text">Texto: </label>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+    </div>
+    <button>Agregar</button>
+</form>
+<script src="submit-blog.js"></script>
+

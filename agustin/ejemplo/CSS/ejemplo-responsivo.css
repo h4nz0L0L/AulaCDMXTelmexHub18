@@ -1,0 +1,172 @@
+/* MOBILE  FIRST*/
+
+body {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    height: 95vh;
+    grid-gap: 10px;
+}
+
+body > * {
+    border: 1px solid lightgreen;
+}
+
+header { position: relative; }
+
+header img {
+    height: 80%;
+    margin: 5px;
+}
+
+header img#menu {
+    position: absolute;
+    right: 0;
+}
+
+#content { padding: 5px; }
+
+header #header-btns,
+#sidebar,
+#header-btns button {
+    display: block;
+}
+
+@keyframes color {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+@keyframes tamano {
+    0%   {font-size: 1em}
+    25%  {font-size: 2em}
+    50%  {font-size: 3em}
+    100% {font-size: 4em}
+}
+
+@keyframes giraY {
+    from {transform: rotateY(0deg)}
+    to   {transform: rotateY(180deg)}
+}
+
+@keyframes giraYCamina {
+    from {
+        transform: rotateY(0deg);
+        margin-left: 0;
+    }
+    to   {
+        transform: rotateY(180deg);
+        margin-left: 100px;        
+    }
+}
+
+h1 {
+    background-color: red;
+    animation-name: tamano;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+}
+
+p {
+    animation: color 20s;
+}
+
+#logo {
+    animation-name: giraYCamina;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* 
+PIENSEN LOS MEDIA QUERIES COMO SI FUERA UN IF ()
+
+SI LA CONDICION SE CUMPLE SE APLICAN LOS ESTILOS DENTRO DE LAS {}
+
+*/
+
+/* Solo pantallas chiquitas */
+ @media (min-widht: 360px) {
+    #header-btns {
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        background-color: grey;
+        transition: height 1s, opacity 5s;
+        -webkit-transition: height 1s, opacity 5s;
+        overflow: hidden;
+    }
+    
+    #menu:hover + #header-btns,
+    #header-btns:hover {
+        height: 62px;
+        opacity: 1;
+    }
+ }
+
+/* PARA TABLET */
+
+@media (min-width: 360px) {
+    body {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    header {
+        grid-column: 1/3; 
+    }
+
+    header #header-btns {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 13px;
+    }
+
+    header #header-btns button {
+        display: inline-block;
+        transition: transform 1s;
+    }
+
+    header #header-btns button:hover {
+        transform: scale(1.5, 1.5);
+    }
+        
+    
+    header img#menu{
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+    }
+}
+
+/* PARA LAP O MONITOR */
+
+@media (min-width: 720px) {
+    body {
+        grid-template-columns:1fr 2fr 1fr;
+    }
+
+    header {
+        grid-column: 1/4; 
+    }
+
+    #content {
+        grid-column-start: 2;
+    }
+
+    header #header-btns {
+        display: block;
+        width: 200px;
+        position: absolute;
+        left: calc(50% - 100px);
+        text-align: center;
+        top: 13px;
+    }
+}
+

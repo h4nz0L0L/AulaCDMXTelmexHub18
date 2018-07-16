@@ -9,6 +9,7 @@
     - en un h3 el número de articulo
     - en un p el contenido
 
+
 [X] Ruta que manda a view con hbs donde capturo: título, número y contenido
     
     get '/blog/new'
@@ -28,6 +29,7 @@
     - con algún estilo css link con los títulos a cada blog
     - botón "Agregar nuevo blog" que redirija  a la página de '/blog-new'
 3. Ponerle un botón en la página de blog para regresar al home
+
 
 
 

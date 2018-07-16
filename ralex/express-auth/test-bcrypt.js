@@ -1,6 +1,6 @@
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt-nodejs')
 
-// bcrypt.hash('password123', 10, function (err, hash) {
+// bcrypt.hash('password123',null, null, function (err, hash) {
 //     if (err) console.log(err)
 
 //     console.log(hash)
@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt')
 
 bcrypt.compare(
     'password123',
-    '$2b$10$IkODAcQaGS1LwM684G2KlOpu.gdqD.Ow.dEomm7y42OeJRr85fYPK',
+    '$2a$10$Kjhc8iZkTTvDlVQIsy97ZeRC5S9RSurP5Z3jK805JIsoSAGgGZqhu',
     function (err, valid) {
         if (err) console.log(err)
         console.log(valid)

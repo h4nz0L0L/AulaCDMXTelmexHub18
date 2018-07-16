@@ -33,7 +33,17 @@ function renderNewBlog (req, res) {
     res.render('new-blog')
 }
 function renderHome (req, res) {
-    res.render('home')
+    client.connect(url, (err, conn) => {
+        if (err) console.log(err)
+        let db = conn.db(dbName)
+        db.collection('blogs')
+        .find({})
+        .toArray(function (err, data) {
+            res.render('home', {
+                blogs: data
+            })
+        })
+    })
 }
 
 function insertBlog (req, res) {

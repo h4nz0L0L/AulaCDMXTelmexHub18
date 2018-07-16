@@ -1,9 +1,9 @@
 <h1>
     HOME
 </h1>
+<a id="btn-new-blog" href="/blog-new">Agregar nuevo Blog</a>
 <ul>
     {{#each blogs}}
-        <li><a href="/blog/{{num}}">{{title}}</a></li>
+        <li><a href="/blog/{{num}}"><img src="https://placeimg.com/600/400" alt=""></a><span>{{title}}</span></li>
     {{/each}}
 </ul>
-<a href="/blog-new">Agregar nuevo Blog</a>

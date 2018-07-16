@@ -1,3 +1,41 @@
 body  {
     color: red;
 }
+
+#btn-new-blog {
+    text-decoration: none;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 0 10px grey;
+}
+
+h1 { text-align: center}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+ul li span {
+    position: absolute;
+    color: white;
+    bottom: 5px;
+    left:5px;
+    z-index: 1000;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+ul li a img {
+    width: 100%;
+}

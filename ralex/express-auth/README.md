@@ -1,6 +1,6 @@
 # Hacer una aplicacion web que permita hacer login
 
-1. Una view con hbs "register" que capture estos campos 
+[x]. Una view con hbs "register" que capture estos campos 
     - Nombre
     - Email
     - Password

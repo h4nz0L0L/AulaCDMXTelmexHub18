@@ -31,12 +31,35 @@ function insertUser (req, res) {
 
 function login (req, res) {
     console.log('login')
-    res.send('login')
-    // conecta a la base de datos
-    // Busca (find) el documento de users que tiene el email
-    // compara usando bcrypt.compare req.body.password con El password del documento que regresa el find (HASH)
-    // Si da true regreso "Autenticación correcta"
-    // Si no, regresa "Error de Autenticación"
+    // res.send('login')
+    client.connect(url, function (err, conn) {
+        if (err) console.log(err)
+        let db =  conn.db(dbName)
+        db.collection('users')
+        .findOne(
+            {email: req.body.email},
+            function (err, data) {
+                if (err) console.log(err)
+                if (data) {
+                    bcrypt.compare(
+                        req.body.password,
+                        data.password,
+                        function (err, valid) {
+                            if (err) console.log(err)
+                            if (valid) {
+                                res.send(`Bienvenido, ${data.name}`)
+                            } else {
+                                res.send("Error de Autenticación")
+                            }
+                        }
+                    )      
+                } else {
+                    res.send("Error de Autenticación")
+                }
+
+            }
+        )
+    })
 
     // PLUS: guardar los datos del usario con JWT en la cookie
     // Generar el token y ese lo regresan en la cookie

@@ -3,8 +3,8 @@ function submitLogin (e) {
 
     let formData = $("#login-form").serialize()
     console.log(formData)
-    $.post('/api/users', formData, function (res) {
-        console.log(res)
+    $.post('/api/login', formData, function (res) {
+        alert(res)
     })
 
     return false

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <div ng-app="appHttp">
+
+    <div id="wrapper" class = "toggled">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            Adopta, No compres
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!registro">Registro</a>
+                    </li>
+                    <li>
+                        <a href="#!adopcion">Adopcion</a>
+                    </li>
+                    <li>
+                        <a href="#!extravio">Extravio</a>
+                    </li>
+                    <li>
+                        <a href="#!eventos">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="#!about">Acerca de nosotros</a>
+                    </li>
+                    <li>
+                        <a href="#!ser">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#!contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+        <!-- <p><a href="#/!">Menu</a></p>
+
+        <a href="#!red">Registro</a>
+        <a href="#!green">Adopcion</a>
+        <a href="#!blue">Extravio</a> -->
+        <div ng-view></div>
+    </div>   
+    <script src="router-module.js"></script>
+    <script src="router-config.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
